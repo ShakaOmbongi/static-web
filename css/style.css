@@ -1,0 +1,470 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #ffffff; /* White text for better contrast */
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #000000; /* Black background */
+  font-family: Arial, sans-serif; /* Default font */
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #555555;
+  text-shadow: none;
+}
+
+::selection {
+  background: #555555;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   Custom Styles for Shaka's Travel Agency
+   ========================================================================== */
+
+/* Header Styles */
+header {
+  background-color: #111111; /* Darker shade for header */
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+header .banner {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+  color: #cccccc; /* Light gray for tagline */
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #222222; /* Slightly lighter than header */
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #ffffff; /* White text for links */
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b3d4fc; /* Light blue on hover */
+  text-decoration: underline;
+}
+
+/* Active Navigation Link */
+nav a.active {
+  color: #b3d4fc; /* Highlight color */
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #333333; /* Dark gray for hero background */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #ffffff; /* White text */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* Packages Section */
+.packages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.package {
+  background-color: #222222; /* Dark package background */
+  border: 1px solid #444444; /* Subtle border */
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.package h3 {
+  color: #ffffff; /* White text */
+  margin-bottom: 10px;
+}
+
+.package p {
+  color: #dddddd; /* Light gray text */
+  margin-bottom: 10px;
+}
+
+.package .btn {
+  background-color: #555555; /* Dark button background */
+  color: #ffffff; /* White text */
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: not-allowed; /* Indicate disabled state */
+  opacity: 0.7; /* Slightly transparent */
+}
+
+.package .btn:hover {
+  background-color: #777777; /* Lighter on hover */
+}
+
+/* Booking Form */
+form {
+  background-color: #222222; /* Dark form background */
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  color: #ffffff; /* White text */
+  margin-bottom: 5px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555555; /* Dark border */
+  border-radius: 4px;
+  background-color: #333333; /* Slightly lighter dark background */
+  color: #ffffff; /* White text */
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form .btn {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #555555; /* Dark button background */
+  color: #ffffff; /* White text */
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+form .btn:hover {
+  background-color: #777777; /* Lighter on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #111111; /* Darker shade for footer */
+  color: #cccccc; /* Light gray text */
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #cccccc; /* Light gray links */
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #b3d4fc; /* Light blue on hover */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .packages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section h2 {
+    font-size: 1.8em;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+}
+
+/* Print Styles */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #ffffff !important;
+    color: #000000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
